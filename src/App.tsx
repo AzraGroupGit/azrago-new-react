@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import TourDetail from "./pages/TourDetail";
-import AllDestinations from "./components/layout/AllDestinations";
-import Booking from "./components/layout/Booking";
+import AllDestinations from "./pages/AllDestinations";
+import Booking from "./pages/Booking";
 import ScrollToTop from "./components/ui/ScrollToTop";
 
 function App() {

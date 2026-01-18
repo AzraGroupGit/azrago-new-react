@@ -1,10 +1,10 @@
 import { useState, useMemo } from "react";
 import { Search, SlidersHorizontal, X } from "lucide-react";
-import { destinationsData } from "../../data/dataDummy";
-import Navbar from "./Navbar";
-import DestinationCard from "../ui/DestinationCard";
-import Footer from "./Footer";
-import DropdownForm from "../ui/DropdownForm";
+import { destinationsData } from "../data/dataDummy";
+import Navbar from "../components/layout/Navbar";
+import DestinationCard from "../components/ui/DestinationCard";
+import Footer from "../components/layout/Footer";
+import DropdownForm from "../components/ui/DropdownForm";
 
 function AllDestinations() {
   const [searchQuery, setSearchQuery] = useState("");

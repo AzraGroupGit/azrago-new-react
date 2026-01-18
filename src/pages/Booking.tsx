@@ -11,9 +11,9 @@ import {
   AlertCircle,
   Check,
 } from "lucide-react";
-import { destinationsData } from "../../data/dataDummy";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import { destinationsData } from "../data/dataDummy";
+import Navbar from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer";
 
 function Booking() {
   const { id } = useParams();
