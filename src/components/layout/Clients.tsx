@@ -1,4 +1,6 @@
-// Data clients
+import { useLanguage } from "../../context/LanguageContext";
+
+// Data clients (data ini tidak perlu diterjemahkan karena nama brand)
 const clientsData = [
   { id: 1, name: "TripAdvisor", logo: "🌍" },
   { id: 2, name: "Booking.com", logo: "🏨" },
@@ -11,6 +13,8 @@ const clientsData = [
 ];
 
 function Clients() {
+  const { t } = useLanguage();
+
   // Duplikasi data untuk infinite loop effect
   const duplicatedClients = [...clientsData, ...clientsData];
 
@@ -20,11 +24,10 @@ function Clients() {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Trusted Partners
+            {t.clients.title}
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-            We collaborate with the world's leading travel platforms to bring
-            you the best experience
+            {t.clients.subtitle}
           </p>
         </div>
 

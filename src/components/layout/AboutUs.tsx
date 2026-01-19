@@ -1,6 +1,9 @@
+import { useLanguage } from "../../context/LanguageContext";
 import { aboutUsData } from "../../data/aboutUsData";
 
 function AboutUs() {
+  const { t } = useLanguage();
+
   return (
     <section id="about-us" className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
@@ -20,15 +23,14 @@ function AboutUs() {
                 d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
               />
             </svg>
-            <span className="font-semibold">About Us</span>
+            <span className="font-semibold">{t.aboutUs.badge}</span>
           </div>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Crafting Unforgettable Journeys Since {aboutUsData.foundedYear}
+            {t.aboutUs.title} {aboutUsData.foundedYear}
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            We're more than just a travel agency - we're your gateway to
-            extraordinary experiences
+            {t.aboutUs.subtitle}
           </p>
         </div>
 
@@ -42,7 +44,6 @@ function AboutUs() {
                 alt="Our Travel Team"
                 className="w-full h-[400px] md:h-[500px] object-cover transform hover:scale-105 transition-transform duration-700"
               />
-              {/* Decorative Element */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
 
@@ -52,7 +53,10 @@ function AboutUs() {
                 <div className="text-4xl font-bold">
                   {new Date().getFullYear() - aboutUsData.foundedYear}+
                 </div>
-                <div className="text-sm font-medium">Years Experience</div>
+                <div className="text-sm font-medium">
+                  {t.aboutUs.experienceBadge.years}{" "}
+                  {t.aboutUs.experienceBadge.experience}
+                </div>
               </div>
             </div>
           </div>
@@ -62,20 +66,20 @@ function AboutUs() {
             {/* Mission Statement */}
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Our Mission
+                {t.aboutUs.mission.title}
               </h3>
               <p className="text-gray-700 text-lg leading-relaxed">
-                {aboutUsData.mission}
+                {t.aboutUs.mission.description}
               </p>
             </div>
 
             {/* Core Values */}
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                What Drives Us
+                {t.aboutUs.values.title}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {aboutUsData.values.map((value, index) => (
+                {t.aboutUs.values.items.map((value, index) => (
                   <div key={index} className="flex items-start gap-4">
                     <div className="w-12 h-12 flex items-center justify-center bg-blue-50 text-blue-600 rounded-xl flex-shrink-0">
                       <svg
@@ -115,10 +119,10 @@ function AboutUs() {
                       {aboutUsData.team.name}
                     </h4>
                     <p className="text-gray-600 text-sm">
-                      {aboutUsData.team.position}
+                      {t.aboutUs.team.position}
                     </p>
                     <p className="text-gray-500 text-sm mt-2 italic">
-                      "{aboutUsData.team.quote}"
+                      "{t.aboutUs.team.quote}"
                     </p>
                   </div>
                 </div>
@@ -134,25 +138,33 @@ function AboutUs() {
               <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                 {aboutUsData.stats.travelers}+
               </div>
-              <div className="text-gray-700 font-medium">Happy Travelers</div>
+              <div className="text-gray-700 font-medium">
+                {t.aboutUs.stats.travelers}
+              </div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                 {aboutUsData.stats.destinations}+
               </div>
-              <div className="text-gray-700 font-medium">Destinations</div>
+              <div className="text-gray-700 font-medium">
+                {t.aboutUs.stats.destinations}
+              </div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                 {aboutUsData.stats.tours}+
               </div>
-              <div className="text-gray-700 font-medium">Curated Tours</div>
+              <div className="text-gray-700 font-medium">
+                {t.aboutUs.stats.tours}
+              </div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                 {aboutUsData.stats.guides}+
               </div>
-              <div className="text-gray-700 font-medium">Expert Guides</div>
+              <div className="text-gray-700 font-medium">
+                {t.aboutUs.stats.guides}
+              </div>
             </div>
           </div>
         </div>
@@ -160,11 +172,9 @@ function AboutUs() {
         {/* CTA */}
         <div className="text-center mt-16">
           <button className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-            Discover Our Story
+            {t.aboutUs.cta.button}
           </button>
-          <p className="text-gray-500 mt-4">
-            Ready to create your next adventure with us?
-          </p>
+          <p className="text-gray-500 mt-4">{t.aboutUs.cta.subtitle}</p>
         </div>
       </div>
     </section>
