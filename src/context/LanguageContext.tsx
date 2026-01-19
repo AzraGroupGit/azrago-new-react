@@ -14,7 +14,6 @@ interface LanguageContextType {
   language: LanguageCode;
   setLanguage: (lang: LanguageCode) => void;
   t: Translations;
-  // Tambahkan helper functions
   formatPrice: (price: number) => string;
   translateDuration: (duration: string) => string;
   getCurrencySymbol: () => string;
