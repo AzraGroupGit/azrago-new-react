@@ -1,32 +1,45 @@
+// src/components/ui/SearchButton.tsx
+
+import { useLanguage } from "../../context/LanguageContext";
+
 function SearchButton() {
+  const { t } = useLanguage();
+
+  const handleSearch = () => {};
+
   return (
     <button
       type="button"
+      onClick={handleSearch}
       className="
         group
         flex items-center justify-center gap-2
-        bg-white text-gray-800
-        px-4 py-3 rounded-xl
-        shadow-md
-        hover:bg-gray-100 hover:shadow-lg
-        active:scale-95
+        bg-gradient-to-r from-blue-600 to-blue-700 
+        text-white
+        px-4 py-3.5 rounded-xl
+        shadow-lg
+        hover:from-blue-700 hover:to-blue-800 
+        hover:shadow-xl
+        active:scale-[0.98]
         transition-all duration-300 ease-out
-        w-full md:w-auto
-        focus:outline-none focus:ring-2 focus:ring-blue-500/40
+        w-full
+        focus:outline-none focus:ring-2 focus:ring-blue-500/60 focus:ring-offset-2
+        focus:ring-offset-blue-900/20
+        mt-2
       "
     >
-      {/* Icon */}
+      {/* Search Icon */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="
           w-5 h-5
           transition-transform duration-300
-          group-hover:translate-x-0.5
+          group-hover:scale-110
         "
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
-        strokeWidth={2}
+        strokeWidth={2.5}
       >
         <path
           strokeLinecap="round"
@@ -36,7 +49,9 @@ function SearchButton() {
       </svg>
 
       {/* Text */}
-      <span className="text-sm font-medium tracking-wide">Search</span>
+      <span className="text-sm font-semibold tracking-wide">
+        {t.hero?.search || "Search"}
+      </span>
     </button>
   );
 }

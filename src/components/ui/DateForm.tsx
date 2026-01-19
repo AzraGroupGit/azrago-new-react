@@ -1,22 +1,35 @@
+// src/components/ui/DateForm.tsx
+
+import { useState } from "react";
+import { useLanguage } from "../../context/LanguageContext";
+
 function DateForm() {
+  const [selectedDate, setSelectedDate] = useState("");
+  const { t } = useLanguage();
+
   return (
     <div className="flex flex-col w-full">
       <label htmlFor="date" className="text-sm font-medium text-white mb-2">
-        Date
+        {t.hero?.dateLabel || "Date"}
       </label>
 
       <div className="relative group">
         <input
           type="date"
           id="date"
+          value={selectedDate}
+          onChange={(e) => setSelectedDate(e.target.value)}
           className="
-            bg-gray-50 border border-gray-300
-            text-gray-900 text-sm rounded-lg
-            block w-full p-2.5 pl-9
+            bg-white/10 backdrop-blur-sm border border-white/20
+            text-white text-sm rounded-xl
+            block w-full p-3 pl-10
             transition-all duration-300
-            focus:ring-2 focus:ring-blue-500/40
-            focus:border-blue-500
+            focus:ring-2 focus:ring-blue-500/60
+            focus:border-blue-400 focus:bg-white/20
+            placeholder:text-gray-300
+            hover:bg-white/15 hover:border-white/30
           "
+          placeholder={t.hero?.datePlaceholder || "Select date"}
         />
 
         {/* Calendar Icon */}
@@ -25,9 +38,9 @@ function DateForm() {
             pointer-events-none
             absolute inset-y-0 left-3
             flex items-center
-            text-gray-400
+            text-gray-300
             transition-colors duration-300
-            group-focus-within:text-blue-500
+            group-focus-within:text-blue-400
           "
         >
           <svg
