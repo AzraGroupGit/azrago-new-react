@@ -3,11 +3,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../../context/LanguageContext";
-import {
-  formatPrice,
-  getDurationTranslation,
-  getTranslatedDestination,
-} from "../../utils/translationHelpers";
+import { getTranslatedDestination } from "../../utils/translationHelpers";
 import type { Destination } from "../../data/dataDummy";
 
 interface DestinationCardProps {
@@ -17,19 +13,16 @@ interface DestinationCardProps {
 function DestinationCard({ destination }: DestinationCardProps) {
   const [imageError, setImageError] = useState(false);
   const navigate = useNavigate();
-  const { language, t } = useLanguage();
+  const { t, language, formatPrice, translateDuration } = useLanguage();
 
   // Get translated destination data
   const translatedDest = getTranslatedDestination(destination, language);
 
-  // Format price based on language
-  const formattedPrice = formatPrice(destination.price, language);
+  // Format price using context helper
+  const formattedPrice = formatPrice(destination.price);
 
-  // Translate duration
-  const translatedDuration = getDurationTranslation(
-    destination.duration,
-    language,
-  );
+  // Translate duration using context helper
+  const translatedDuration = translateDuration(destination.duration);
 
   // Fallback image jika gambar utama error
   const fallbackImage = `https://via.placeholder.com/800x600/3b82f6/ffffff?text=${encodeURIComponent(translatedDest.name)}`;
@@ -76,7 +69,7 @@ function DestinationCard({ destination }: DestinationCardProps) {
       <div className="p-6 flex flex-col flex-grow">
         <div className="mb-3">
           <span className="inline-block px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-semibold">
-            {t.destinationCard.popular || "Popular"}
+            {t.destinationCard?.popular || "Popular"}
           </span>
         </div>
 
@@ -124,14 +117,14 @@ function DestinationCard({ destination }: DestinationCardProps) {
           </div>
           <div className="text-gray-500 text-sm">
             <span className="font-semibold">{destination.reviews}</span>{" "}
-            {t.destinationCard.reviews || "reviews"}
+            {t.destinationCard?.reviews || "reviews"}
           </div>
         </div>
 
         <div className="flex items-center justify-between pt-4 border-t border-gray-100 flex-shrink-0">
           <div>
             <span className="text-gray-500 text-xs">
-              {t.destinationCard.startingFrom || "Starting from"}
+              {t.destinationCard?.startingFrom || "Starting from"}
             </span>
             <p className="text-2xl font-bold text-blue-600">
               {formattedPrice}
@@ -144,7 +137,7 @@ function DestinationCard({ destination }: DestinationCardProps) {
             onClick={handleViewDetails}
             className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg flex items-center gap-2"
           >
-            <span>{t.destinationCard.viewDetails || "View Details"}</span>
+            <span>{t.destinationCard?.viewDetails || "View Details"}</span>
             <svg
               className="w-4 h-4"
               fill="none"
