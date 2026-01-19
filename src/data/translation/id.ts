@@ -18,11 +18,45 @@ export const idTranslations = {
   // Hero Section
   hero: {
     title: "Temukan Tempat Menakjubkan",
-    subtitle: "Jelajahi dunia dengan pemandu ahli kami",
+    subtitle:
+      "Temukan Tempat Terbaik di Indonesia Dengan Harga Terbaik, Layanan Terbaik & Pilihan Terbaik",
     searchPlaceholder: "Mau pergi ke mana?",
     datePlaceholder: "Pilih Tanggal",
     travelersPlaceholder: "Jumlah Wisatawan",
     searchButton: "Cari",
+    bookTitle: "Pesan Perjalanan Anda",
+    destinationLabel: "Destinasi",
+    packageLabel: "Paket Tour",
+    destinationOptions: [
+      "Bali",
+      "Jakarta",
+      "Bandung",
+      "Surabaya",
+      "Semarang",
+      "Yogyakarta",
+      "Lombok",
+      "Pulau Komodo",
+      "Raja Ampat",
+      "Bromo",
+      "Borobudur",
+    ],
+    packageOptions: [
+      "Trip 1 Hari",
+      "2 Hari 1 Malam",
+      "3 Hari 2 Malam",
+      "5 Hari 4 Malam",
+      "7 Hari 6 Malam",
+      "Paket Kustom",
+    ],
+    happyCustomers: "Pelanggan Bahagia",
+    destinationsCount: "Destinasi",
+    rating: "Penilaian",
+    scrollDown: "Scroll ke Bawah",
+    instagram: "Instagram",
+    whatsapp: "WhatsApp",
+    email: "Email",
+    search: "Cari",
+    dateLabel: "Pilih Tanggal",
   },
 
   destinations: {
@@ -114,6 +148,32 @@ export const idTranslations = {
   about: {
     title: "Tentang Perusahaan Kami",
     description: "Kami menyediakan pengalaman perjalanan terbaik...",
+  },
+
+  articles: {
+    title: "Artikel Terbaru & Tips Perjalanan",
+    subtitle:
+      "Dapatkan inspirasi dari kisah perjalanan terbaru, panduan destinasi, dan tips ahli kami",
+    viewAllButton: "Lihat Semua Artikel",
+    readMore: "Baca Selengkapnya",
+    by: "oleh",
+    readTime: "menit baca",
+    category: "Kategori",
+    noResults: "Tidak ada artikel ditemukan",
+    categories: {
+      tips: "Tips Perjalanan",
+      guides: "Panduan Destinasi",
+      stories: "Kisah Perjalanan",
+      culture: "Budaya Lokal",
+      food: "Makanan & Kuliner",
+      adventure: "Petualangan",
+      destination: "Destinasi",
+      travelTips: "Tips Perjalanan",
+      travelGuide: "Panduan Travel",
+      foodCulture: "Makanan & Budaya",
+      ecoTravel: "Travel Ramah Lingkungan",
+      photography: "Fotografi",
+    },
   },
 
   // Footer

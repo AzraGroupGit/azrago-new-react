@@ -1,8 +1,32 @@
+// src/assets/components/layout/Hero.tsx
+
 import DateForm from "../ui/DateForm";
 import DropdownForm from "../ui/DropdownForm";
 import SearchButton from "../ui/SearchButton";
+import { useLanguage } from "../../context/LanguageContext";
 
 function Hero() {
+  const { t } = useLanguage();
+
+  // Destination options based on language
+  const destinationOptions = t.hero?.destinationOptions || [
+    "Bali",
+    "Jakarta",
+    "Bandung",
+    "Surabaya",
+    "Semarang",
+    "Yogyakarta",
+  ];
+
+  // Tour package options based on language
+  const packageOptions = t.hero?.packageOptions || [
+    "1 Day Trip",
+    "2 Days 1 Night",
+    "3 Days 2 Nights",
+    "5 Days 4 Nights",
+    "Custom Package",
+  ];
+
   return (
     <section id="hero" className="min-w-screen bg-gray-100">
       <div className="relative min-h-[85vh] lg:h-screen flex items-start lg:items-center pt-24 pb-12 md:pb-0 lg:pt-0 justify-center">
@@ -28,7 +52,7 @@ function Hero() {
                   "
                   style={{ animationDelay: "0.1s" }}
                 >
-                  We Plan Your Perfect Get Away
+                  {t.hero?.title || "We Plan Your Perfect Get Away"}
                 </h1>
 
                 {/* Subtitle */}
@@ -39,8 +63,8 @@ function Hero() {
                   "
                   style={{ animationDelay: "0.3s" }}
                 >
-                  Discover Most Engaging Place In Indonesia Best Price, Best
-                  Services & Best Choice
+                  {t.hero?.subtitle ||
+                    "Discover Most Engaging Place In Indonesia Best Price, Best Services & Best Choice"}
                 </p>
               </div>
 
@@ -58,6 +82,7 @@ function Hero() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/40 transition-all"
+                  aria-label={t.hero?.instagram || "Instagram"}
                 >
                   <svg
                     className="w-5 h-5 text-white"
@@ -75,6 +100,7 @@ function Hero() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/40 transition-all"
+                  aria-label={t.hero?.whatsapp || "WhatsApp"}
                 >
                   <svg
                     className="w-5 h-5 text-white"
@@ -89,6 +115,7 @@ function Hero() {
                 <a
                   href="mailto:info@yourtravel.com"
                   className="w-10 h-10 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/40 transition-all"
+                  aria-label={t.hero?.email || "Email"}
                 >
                   <svg
                     className="w-5 h-5 text-white"
@@ -114,7 +141,7 @@ function Hero() {
                     500+
                   </p>
                   <p className="text-xs md:text-sm opacity-80 mt-1">
-                    Happy Customers
+                    {t.hero?.happyCustomers || "Happy Customers"}
                   </p>
                 </div>
                 <div className="flex-1 bg-white/20 rounded-2xl p-4 backdrop-blur-md hover:bg-white/30 transition-all w-full text-center justify-center">
@@ -122,14 +149,16 @@ function Hero() {
                     50+
                   </p>
                   <p className="text-xs md:text-sm opacity-80 mt-1">
-                    Destinations
+                    {t.hero?.destinationsCount || "Destinations"}
                   </p>
                 </div>
                 <div className="flex-1 bg-white/20 rounded-2xl p-4 backdrop-blur-md hover:bg-white/30 transition-all w-full text-center justify-center">
                   <p className="text-2xl md:text-3xl lg:text-4xl font-bold">
                     4.9★
                   </p>
-                  <p className="text-xs md:text-sm opacity-80 mt-1">Rating</p>
+                  <p className="text-xs md:text-sm opacity-80 mt-1">
+                    {t.hero?.rating || "Rating"}
+                  </p>
                 </div>
               </div>
             </div>
@@ -141,32 +170,19 @@ function Hero() {
             >
               <div className="bg-white/20 rounded-2xl p-6 backdrop-blur-md backdrop-brightness-90 border border-white/30 h-full flex flex-col">
                 <h3 className="text-white font-bold text-xl mb-4">
-                  Book Your Trip
+                  {t.hero?.bookTitle || "Book Your Trip"}
                 </h3>
                 <div className="flex flex-col gap-4 flex-grow">
                   <DropdownForm
-                    label="Destination"
-                    options={[
-                      "Bali",
-                      "Jakarta",
-                      "Bandung",
-                      "Surabaya",
-                      "Semarang",
-                      "Yogyakarta",
-                    ]}
+                    label={t.hero?.destinationLabel || "Destination"}
+                    options={destinationOptions}
                   />
 
                   <DateForm />
 
                   <DropdownForm
-                    label="Tour Packet"
-                    options={[
-                      "1 Day Trip",
-                      "2 Days 1 Night",
-                      "3 Days 2 Nights",
-                      "5 Days 4 Nights",
-                      "Custom Package",
-                    ]}
+                    label={t.hero?.packageLabel || "Tour Package"}
+                    options={packageOptions}
                   />
 
                   <SearchButton />
@@ -191,7 +207,9 @@ function Hero() {
               d="M19 14l-7 7m0 0l-7-7m7 7V3"
             />
           </svg>
-          <span className="text-white text-sm mt-1">Scroll Down</span>
+          <span className="text-white text-sm mt-1">
+            {t.hero?.scrollDown || "Scroll Down"}
+          </span>
         </div>
       </div>
     </section>
