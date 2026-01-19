@@ -4,7 +4,6 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 import { enTranslations } from "../data/translation/en";
 import { idTranslations } from "../data/translation/id";
 import LanguageSelector from "../components/common/LanguageSelector";
-import { languages } from "../data/language";
 
 export type LanguageCode = "id" | "en";
 

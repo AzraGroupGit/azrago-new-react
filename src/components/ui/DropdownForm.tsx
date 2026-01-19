@@ -11,7 +11,7 @@ interface DropdownFormProps {
 
 function DropdownForm({ label, options, placeholder }: DropdownFormProps) {
   const [selectedValue, setSelectedValue] = useState("");
-  const { t, language } = useLanguage();
+  const { language } = useLanguage(); // HAPUS 't' di sini karena tidak digunakan
   const id = label.replace(/\s+/g, "-").toLowerCase();
 
   // Helper untuk placeholder berdasarkan bahasa
