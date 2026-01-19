@@ -8,6 +8,7 @@ import Hero from "../components/layout/Hero";
 import HowItWorks from "../components/layout/HowItWork";
 import Navbar from "../components/layout/Navbar";
 import PopularDestinations from "../components/layout/PopularDestination";
+import Testimonials from "../components/layout/Testimonial";
 import WhyChooseUs from "../components/layout/WhyChooseUs";
 
 function Home() {
@@ -27,6 +28,9 @@ function Home() {
         <HowItWorks />
       </section>
       <Clients />
+      <section id="testimonials">
+        <Testimonials />
+      </section>
       <section id="articles">
         <Articles />
       </section>

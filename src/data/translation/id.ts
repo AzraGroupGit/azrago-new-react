@@ -144,6 +144,101 @@ export const idTranslations = {
     },
   },
 
+  testimonials: {
+    badge: "Testimoni",
+    title: "Apa Kata Wisatawan Kami",
+    subtitle:
+      "Jangan hanya percaya kata-kata kami - dengarkan dari para wisatawan yang telah merasakan perjalanan tak terlupakan bersama kami",
+
+    items: [
+      {
+        id: 1,
+        name: "Sarah Johnson",
+        location: "Singapura",
+        avatar: "https://i.pravatar.cc/150?img=1",
+        rating: 5,
+        date: "Desember 2024",
+        review:
+          "Pengalaman luar biasa menjelajahi Bali! Pemandu wisata sangat berpengetahuan dan ramah. Semuanya terorganisir dengan baik dari awal hingga akhir. Sangat direkomendasikan!",
+        destination: "Surga Bali",
+      },
+      {
+        id: 2,
+        name: "Michael Chen",
+        location: "Malaysia",
+        avatar: "https://i.pravatar.cc/150?img=12",
+        rating: 5,
+        date: "November 2024",
+        review:
+          "Liburan terbaik yang pernah ada! Itinerary sempurna dan kami dapat mengunjungi semua tempat wajib di Yogyakarta. Nilai uang yang bagus dan layanan yang sangat baik.",
+        destination: "Warisan Yogyakarta",
+      },
+      {
+        id: 3,
+        name: "Emma Williams",
+        location: "Australia",
+        avatar: "https://i.pravatar.cc/150?img=5",
+        rating: 5,
+        date: "Oktober 2024",
+        review:
+          "Pengalaman menyelam yang tak terlupakan di Raja Ampat! Pemandangan bawah laut sangat menakjubkan. Tim sangat merawat kami sepanjang perjalanan.",
+        destination: "Menyelam Raja Ampat",
+      },
+      {
+        id: 4,
+        name: "David Anderson",
+        location: "Amerika Serikat",
+        avatar: "https://i.pravatar.cc/150?img=13",
+        rating: 4,
+        date: "September 2024",
+        review:
+          "Paket tur yang bagus dengan harga yang wajar. Akomodasi nyaman dan makanannya lezat. Pasti akan memesan lagi!",
+        destination: "Liburan Bandung",
+      },
+      {
+        id: 5,
+        name: "Lisa Martinez",
+        location: "Spanyol",
+        avatar: "https://i.pravatar.cc/150?img=9",
+        rating: 5,
+        date: "Agustus 2024",
+        review:
+          "Layanan profesional dan destinasi yang menakjubkan! Setiap detail diperhatikan. Pemandu memastikan kami mendapatkan pengalaman terbaik.",
+        destination: "Tur Kota Jakarta",
+      },
+      {
+        id: 6,
+        name: "James Wilson",
+        location: "Inggris Raya",
+        avatar: "https://i.pravatar.cc/150?img=14",
+        rating: 5,
+        date: "Juli 2024",
+        review:
+          "Lombok adalah surga! Pantai yang indah, penduduk lokal yang ramah, dan organisasi yang sempurna. Agen perjalanan ini melebihi semua harapan kami!",
+        destination: "Petualangan Lombok",
+      },
+    ],
+
+    stats: {
+      travelers: {
+        value: "500+",
+        label: "Wisatawan Puas",
+      },
+      rating: {
+        value: "4.9",
+        label: "Rating Rata-rata",
+      },
+      destinations: {
+        value: "50+",
+        label: "Destinasi",
+      },
+      satisfaction: {
+        value: "98%",
+        label: "Tingkat Kepuasan",
+      },
+    },
+  },
+
   // About Us
   about: {
     title: "Tentang Perusahaan Kami",
