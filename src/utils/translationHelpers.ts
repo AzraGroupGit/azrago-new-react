@@ -1,6 +1,6 @@
 // src/utils/translationHelpers.ts
 
-import { Destination } from "../data/dataDummy";
+import type { Destination } from "../data/dataDummy";
 
 export const getTranslatedDestination = (
   destination: Destination,

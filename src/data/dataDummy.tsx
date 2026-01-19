@@ -883,5 +883,4 @@ export const destinationsData: Destination[] = [
       },
     },
   },
-  // Anda bisa tambahkan destinasi lainnya (Santorini, Dubai, Maldives) dengan struktur yang sama
 ];
