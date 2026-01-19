@@ -1,31 +1,45 @@
+// src/assets/components/layout/PopularDestination.tsx
 import { useNavigate } from "react-router-dom";
+import { useLanguage } from "../../context/LanguageContext";
 import { destinationsData } from "../../data/dataDummy";
 import DestinationCard from "../ui/DestinationCard";
 
 function PopularDestinations() {
   const navigate = useNavigate();
+  const { t } = useLanguage();
 
   const handleViewAll = () => {
     navigate("/destinations");
   };
 
+  // Filter atau pilih destinasi berdasarkan bahasa
+  const filteredDestinations = destinationsData.filter(
+    (dest) =>
+      dest.language === undefined ||
+      dest.language === "all" ||
+      dest.language === t.languageCode,
+  );
+
   return (
-    <section id="destinations" className="py-16 md:py-24 from-white">
+    <section
+      id="destinations"
+      className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50"
+    >
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Popular Destinations
+            {t.destinations.title || "Popular Destinations"}
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-            Explore our most loved travel packages and create unforgettable
-            memories
+            {t.destinations.subtitle ||
+              "Explore our most loved travel packages and create unforgettable memories"}
           </p>
         </div>
 
         {/* Destinations Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {destinationsData.map((destination) => (
+          {filteredDestinations.map((destination) => (
             <DestinationCard key={destination.id} destination={destination} />
           ))}
         </div>
@@ -36,7 +50,7 @@ function PopularDestinations() {
             className="bg-white hover:bg-gray-50 text-blue-600 font-semibold py-4 px-8 rounded-xl border-2 border-blue-600 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
             onClick={handleViewAll}
           >
-            View All Destinations
+            {t.destinations.viewAllButton || "View All Destinations"}
           </button>
         </div>
       </div>
