@@ -51,6 +51,65 @@ export const idTranslations = {
     location: "Lokasi",
   },
 
+  // Why Choose Us Section
+  whyChooseUs: {
+    title: "Mengapa Memilih Kami",
+    subtitle:
+      "Kami menyediakan pengalaman perjalanan terbaik dengan layanan profesional dan harga yang kompetitif",
+
+    features: [
+      {
+        id: 1,
+        icon: "🏆",
+        title: "Pemandu Ahli",
+        description:
+          "Tim pemandu berpengalaman dan berlisensi siap membimbing perjalanan Anda dengan pengetahuan lokal yang mendalam",
+      },
+      {
+        id: 2,
+        icon: "💰",
+        title: "Harga Terbaik",
+        description:
+          "Jaminan harga terbaik tanpa biaya tersembunyi. Kami menawarkan paket perjalanan dengan nilai terbaik",
+      },
+      {
+        id: 3,
+        icon: "🛡️",
+        title: "Perjalanan Aman",
+        description:
+          "Keamanan Anda adalah prioritas kami. Semua perjalanan dilengkapi asuransi dan protokol keselamatan",
+      },
+      {
+        id: 4,
+        icon: "⭐",
+        title: "Layanan Premium",
+        description:
+          "Nikmati layanan pelanggan kelas dunia dengan dukungan 24/7 untuk kebutuhan perjalanan Anda",
+      },
+      {
+        id: 5,
+        icon: "🗓️",
+        title: "Pembatalan Fleksibel",
+        description:
+          "Kebijakan pembatalan yang fleksibel memberikan ketenangan pikiran saat merencanakan perjalanan Anda",
+      },
+      {
+        id: 6,
+        icon: "🎯",
+        title: "Itinerary Kustom",
+        description:
+          "Sesuaikan perjalanan Anda sesuai preferensi dengan opsi itinerary yang dapat disesuaikan",
+      },
+    ],
+
+    cta: {
+      title: "Siap Memulai Petualangan Anda?",
+      subtitle:
+        "Pesan liburan impian Anda sekarang dan dapatkan diskon khusus untuk pemesanan early bird",
+      button: "Mulai Sekarang",
+    },
+  },
+
   // About Us
   about: {
     title: "Tentang Perusahaan Kami",
@@ -91,5 +150,122 @@ export const idTranslations = {
     cookiePolicy: "Kebijakan Cookie",
     madeWith: "Dibuat dengan penuh semangat untuk para traveler",
     paymentMethods: "Kami menerima:",
+  },
+
+  // How It Works Section
+  howItWorks: {
+    title: "Cara Kerjanya",
+    subtitle:
+      "Proses pemesanan yang sederhana dan mudah untuk memulai liburan impian Anda hanya dalam 4 langkah",
+
+    steps: [
+      {
+        step: "01",
+        title: "Pilih Destinasi",
+        description:
+          "Jelajahi pilihan destinasi menakjubkan kami dan pilih liburan sempurna Anda",
+        icon: "🗺️",
+      },
+      {
+        step: "02",
+        title: "Pilih Tanggal",
+        description:
+          "Pilih tanggal perjalanan yang Anda inginkan dan sesuaikan itinerary dengan jadwal Anda",
+        icon: "📅",
+      },
+      {
+        step: "03",
+        title: "Pesan & Bayar",
+        description:
+          "Selesaikan pemesanan dengan opsi pembayaran yang aman dan terima konfirmasi instan",
+        icon: "💳",
+      },
+      {
+        step: "04",
+        title: "Nikmati Perjalanan",
+        description:
+          "Siapkan tas Anda dan bersiaplah untuk petualangan tak terlupakan bersama pemandu ahli kami",
+        icon: "✈️",
+      },
+    ],
+
+    benefits: {
+      title: "Yang Akan Anda Dapatkan",
+      items: [
+        "Konfirmasi pemesanan instan",
+        "Dukungan pelanggan 24/7",
+        "Kebijakan pembatalan fleksibel",
+        "Jaminan harga terbaik",
+        "Proses pembayaran aman",
+        "Opsi asuransi perjalanan",
+      ],
+    },
+  },
+
+  // Clients/Trusted Partners Section
+  clients: {
+    title: "Partner Terpercaya",
+    subtitle:
+      "Kami bekerja sama dengan platform perjalanan terkemuka dunia untuk memberikan pengalaman terbaik bagi Anda",
+  },
+
+  // About Us Section
+  aboutUs: {
+    badge: "Tentang Kami",
+    title: "Menciptakan Perjalanan Tak Terlupakan Sejak",
+    subtitle:
+      "Kami lebih dari sekadar agen perjalanan - kami adalah pintu gerbang Anda menuju pengalaman luar biasa",
+
+    experienceBadge: {
+      years: "Tahun",
+      experience: "Pengalaman",
+    },
+
+    mission: {
+      title: "Misi Kami",
+      description:
+        "Misi kami adalah memberikan pengalaman perjalanan yang tak terlupakan dengan layanan terbaik dan destinasi pilihan yang menakjubkan di seluruh Indonesia dan dunia.",
+    },
+
+    values: {
+      title: "Nilai-Nilai Kami",
+      items: [
+        {
+          title: "Kepercayaan",
+          description:
+            "Kami membangun kepercayaan melalui transparansi dan integritas",
+        },
+        {
+          title: "Kualitas",
+          description: "Memberikan layanan terbaik di setiap perjalanan",
+        },
+        {
+          title: "Inovasi",
+          description:
+            "Selalu mencari cara baru untuk meningkatkan pengalaman Anda",
+        },
+        {
+          title: "Kepedulian",
+          description: "Kami peduli dengan setiap detail perjalanan Anda",
+        },
+      ],
+    },
+
+    team: {
+      position: "Pendiri & CEO",
+      quote: "Perjalanan terbaik dimulai dengan kepercayaan",
+    },
+
+    stats: {
+      travelers: "Wisatawan Puas",
+      destinations: "Destinasi",
+      tours: "Tur Pilihan",
+      guides: "Pemandu Ahli",
+    },
+
+    cta: {
+      button: "Temukan Cerita Kami",
+      subtitle: "Siap menciptakan petualangan Anda berikutnya bersama kami?",
+    },
   },
 };
