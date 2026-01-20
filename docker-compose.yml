@@ -1,0 +1,14 @@
+# docker-compose.yml
+version: "3.9" # atau '3.8' masih ok
+services:
+  react-app:
+    build: .
+    container_name: react-vite-app
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
